@@ -1,35 +1,13 @@
 /* global Given, Then, When, And */
 
-import { getUsers, postUser } from '../../api/users'
+import { getUsers, postUser, deleteUser } from '../../api/users'
+import { userDate, userDateBlack} from '../../date/users.date'
 
 let getUsersResponse;
-let postUserResponse;
-const user = { 
-    name: '', 
-    gender: '', 
-    email: '', 
-    status: '' 
-};
-   
+let idUser;
+let user = userDateBlack;
+
 Given('need to consult {string}', () => {});
-
-Given('need to includ a user', () =>{});
-
-And('that the name is {string}', (nameUser) =>{
-    user.name = nameUser
-});
-
-And('that the gender is {string}', (genderUser) =>{
-    user.gender = genderUser
-});
-
-And('that the email is {string}', (emailUser) =>{
-    user.email = emailUser
-});
-
-And('that the status is {string}', (statusUser) =>{
-    user.status = statusUser
-});
 
 When('to call the user query API', () =>{
     getUsers().then((res) => {
@@ -37,9 +15,16 @@ When('to call the user query API', () =>{
     })
 });
 
+Given('need to includ a user', () =>{});
+
+And('inform all user {string}', (data) =>{
+    if(data === 'data') user = userDate
+    else user = userDateBlack
+});
+
 When('to call the API to include the user', () =>{
     postUser(user).then((res) => {
-        postUserResponse = res
+        getUsersResponse = res
     })
 });
 
@@ -55,10 +40,29 @@ And('the code is {int}', (code) =>{
     expect(getUsersResponse.body.code).to.be.equal(code)
 })
 
-And('the code includ is {int}', (code) =>{
-    expect(postUserResponse.body.code).to.be.equal(code)
+And('displays the creation date', () => {
+    expect(getUsersResponse.body.data.created_at).to.exist;
+});
+
+And('displays the message', () =>{
+    getUsersResponse.body.data.forEach( data => {
+        expect(data.field).to.exist;    
+        expect(data.message).to.exist;   
+    });
+}) 
+
+Given('need to delete a user', () =>{});
+
+And('locate a user', () =>{
+    getUsers().then((res) =>{
+        idUser = res.body.data[0].id
+    })
 })
 
-And('displays the creation date', () => {
-    expect(postUserResponse.body.data.created_at).to.exist;
-});
+when('to call the API to delete the user', () => {
+    deleteUser(idUser).then((res) => {
+        getUsersResponse = res
+    })
+}) 
+
+

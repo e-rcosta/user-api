@@ -9,14 +9,28 @@ Then the query will return status 200
 And the code is 200
 And all users will be displayed
 
+Scenario: Consult user if data blanck
+
+Given need to includ a user
+And inform all user "data blanck"
+When to call the API to include the user 
+Then the query will return status 200
+And the code is 422
+And displays the message
+
 Scenario: Includ a user
 
 Given need to includ a user
-And that the name is "Rosangela Fenandes da Costa"
-And that the gender is "Female" 
-And that the email is "rosangelacosta22t1@gmail.com"
-And that the status is "Active" 
+And inform all user "data"
 When to call the API to include the user 
 Then the query will return status 200
-And the code includ is 201
+And the code is 201
 And displays the creation date
+
+Scenario: Delete a user
+
+Given need to delete a user
+And locate a user
+When to call the API to delete the user
+Then the query will return status 200
+And the code is 204
