@@ -1,0 +1,25 @@
+{
+  "name": "teste-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run -- --spec **/*.feature"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps",
+    "nonGlobalStepDefinitions": false
+
+  },
+  "keywords": [],
+  "author": "Rosangela Fernandes da Costa",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^6.4.0"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^2.5.5"
+  }
+}

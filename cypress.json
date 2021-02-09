@@ -1,0 +1,4 @@
+{
+    "baseURL": "https://gorest.co.in",
+    "testFiles": "**/*.feature"
+}
