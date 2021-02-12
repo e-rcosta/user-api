@@ -43,3 +43,7 @@ Step by step to run the tests:
 		* Access the mochawesome-report directory
 
 		* Open html files through the browser
+
+Mind Maps
+
+	See the mind map (mindMaps.pdf) in the file folder.
