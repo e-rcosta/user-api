@@ -47,3 +47,4 @@ Step by step to run the tests:
 Mind Maps
 
 	See the mind map (mindMaps.pdf) in the file folder.
+	
