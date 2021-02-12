@@ -1,7 +1,8 @@
 /* global Given, Then, When, And */
 
-import { deleteUser } from '../../../api/users/deleteUser'
+import { deleteUser, deleteUserInvalidToken } from '../../../api/users/deleteUser'
 import { getUsers } from '../../../api/users/listUser'
+import { invalidUser } from '../../../date/users.date'
 
 let idUser;
 let deleteUsersResponse;
@@ -14,10 +15,25 @@ And('locate a user', () =>{
     })
 });
 
-when('to call the API to delete the user', () => {
-    deleteUser(idUser).then( res => {
-        deleteUsersResponse = res
-    })
+when('to call the API to delete the user with an {string}', (valid) => {
+    if(valid === 'valid user'){
+        deleteUser(idUser).then( res => {
+            deleteUsersResponse = res
+        })
+    } else if(valid === 'invalid token'){
+        deleteUserInvalidToken(idUser).then( res => {
+            deleteUsersResponse = res
+        })
+    } else if(valid === 'invalid user'){
+        deleteUser(invalidUser).then( res => {
+            deleteUsersResponse = res
+        })
+    } else {
+        deleteUser('').then( res => {
+            deleteUsersResponse = res
+        })
+    }
+    
 }); 
 
 Then('the query will return delete status {int}', (statusCode) => {
@@ -28,3 +44,6 @@ And('the code delete is {int}', (code) =>{
     expect(deleteUsersResponse.body.code).to.be.equal(code)
 });
 
+And('displays the delete message', () =>{
+    expect(deleteUsersResponse.body.data.message).to.exist;
+}) 

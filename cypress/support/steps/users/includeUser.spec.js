@@ -1,6 +1,6 @@
 /* global Given, Then, When, And */
 
-import { postUser, postUserTokenInvalid } from '../../../api/users/includUser'
+import { postUser, postUserInvalidToken } from '../../../api/users/includUser'
 import { userDate, userDateBlack} from '../../../date/users.date'
 
 let user = userDateBlack;
@@ -20,7 +20,7 @@ When('to call the API to include the user', () =>{
 });
 
 When('to call the API to include the user if token invalid', () =>{
-    postUserTokenInvalid(user).then( res => {
+    postUserInvalidToken(user).then( res => {
         postUsersResponse = res
     })
 })

@@ -16,7 +16,7 @@ Then the query will return status 200
 And the code is 422
 And displays the message
 
-Scenario: Includ user if token invalid
+Scenario: Includ user if invalid token
 Given need to includ a user
 And inform all user "data"
 When to call the API to include the user if token invalid 

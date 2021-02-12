@@ -13,3 +13,16 @@ export function deleteUser(id) {
           failOnStatusCode: false
     });
   }
+
+  export function deleteUserInvalidToken(id) {
+    return cy.request({
+          method: 'DELETE',
+          url: `${baseUrl}${path}/users/${id}`,
+          headers: { 
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': ''
+          },
+          failOnStatusCode: false
+    });
+  }

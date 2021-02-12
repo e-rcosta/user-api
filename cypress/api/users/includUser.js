@@ -15,7 +15,7 @@ export function postUser(userData) {
     });
   }
   
-export function postUserTokenInvalid(userData) {
+export function postUserInvalidToken(userData) {
     return cy.request({
           method: 'POST',
           url: `${baseUrl}${path}/users`,
