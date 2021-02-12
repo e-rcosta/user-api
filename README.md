@@ -7,17 +7,19 @@ Baixe o projeto no GitHub
 	
 Passo a passo para executar os testes:
 
-1 - Acessar o diretório user-api e instalar as dependências
+	1 - Acessar o diretório user-api e instalar as dependências
 
-* Através do terminal
-Acessar o diretório do projeto: user-api
+		* Através do terminal
 
-instalar as dependencias: npm i
-2 - Executar os testes
+		* Acessar o diretório do projeto: user-api
 
-* acessar o diretório do projeto
+		* instalar as dependencias: npm i
 
-* informar o comando: npm run cypress:open
-Dessa forma será executado atravas da IDE do Cypress
+	2 - Executar os testes
 
-* via terminal: npm run cypress:run
+		* acessar o diretório do projeto
+
+		* informar o comando: npm run cypress:open
+		Dessa forma será executado atravas da IDE do Cypress
+
+		* via terminal: npm run cypress:run
