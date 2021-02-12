@@ -1,25 +1,38 @@
 # user-api
 Projeto de automação de APIs com Cypress + Cucumber
 
-Baixe o projeto no GitHub 
+API automation project with Cypress + Cucumber
+
+Download the project on GitHub
 
 	* https://github.com/e-rcosta/user-api
-	
-Passo a passo para executar os testes:
 
-	1 - Acessar o diretório user-api e instalar as dependências
+Step by step to run the tests:
 
-		* Através do terminal
+	1 - Access the user-api directory and install the dependencies
 
-		* Acessar o diretório do projeto: user-api
+		* Through the terminal
 
-		* instalar as dependencias: npm i
+		* Access to the project directory: user-api
 
-	2 - Executar os testes
+		* Install as dependencies: npm i
 
-		* acessar o diretório do projeto
+	2 - Run the tests
 
-		* informar o comando: npm run cypress:open
-		Dessa forma será executado atravas da IDE do Cypress
+		* Access the project directory
 
-		* via terminal: npm run cypress:run
+		* Through the Cypress IDE
+			
+			command: npm run cypress: open
+
+		* Through command line
+			
+			command: npm run cypress: run
+
+	3 - View reports
+
+		* When tests are generated from the command line, it will be generated from the test reports in the mochawesome report.
+
+		* Access the mochawesome-report directory
+
+		* Open html files through the browser
