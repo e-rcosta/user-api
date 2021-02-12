@@ -10,7 +10,8 @@ Step by step to run the tests:
 
 	1 - Install node.js
 		
-		* Acessar o site abaixo:
+		* Access the website below:
+		
 			https://nodejs.org/en/download/
 		
 		* Download the Node.js source code or a pre-built installer for your platform
