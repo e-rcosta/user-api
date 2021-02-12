@@ -8,7 +8,14 @@ Download the project on GitHub
 
 Step by step to run the tests:
 
-	1 - Access the user-api directory and install the dependencies
+	1 - Instalar o node.js
+		
+		* Acessar o site abaixo:
+			https://nodejs.org/en/download/
+		
+		* Download the Node.js source code or a pre-built installer for your platform
+		
+	2 - Access the user-api directory and install the dependencies
 
 		* Through the terminal
 
@@ -16,7 +23,7 @@ Step by step to run the tests:
 
 		* Install as dependencies: npm i
 
-	2 - Run the tests
+	3 - Run the tests
 
 		* Access the project directory
 
@@ -28,7 +35,7 @@ Step by step to run the tests:
 			
 			command: npm run cypress: run
 
-	3 - View reports
+	4 - View reports
 
 		* When tests are generated from the command line, it will be generated from the test reports in the mochawesome report.
 
