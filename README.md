@@ -8,13 +8,13 @@ Download the project on GitHub
 
 Step by step to run the tests:
 
-	1 - Instalar o node.js
+	1 - Install node.js
 		
 		* Acessar o site abaixo:
 			https://nodejs.org/en/download/
 		
 		* Download the Node.js source code or a pre-built installer for your platform
-		
+
 	2 - Access the user-api directory and install the dependencies
 
 		* Through the terminal
