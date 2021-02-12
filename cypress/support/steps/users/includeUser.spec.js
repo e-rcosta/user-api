@@ -1,6 +1,6 @@
 /* global Given, Then, When, And */
 
-import { postUser, postUserTokenInvalid } from '../../../api/users'
+import { postUser, postUserTokenInvalid } from '../../../api/users/includUser'
 import { userDate, userDateBlack} from '../../../date/users.date'
 
 let user = userDateBlack;

@@ -1,6 +1,7 @@
 /* global Given, Then, When, And */
 
-import { getUsers, deleteUser } from '../../../api/users'
+import { deleteUser } from '../../../api/users/deleteUser'
+import { getUsers } from '../../../api/users/listUser'
 
 let idUser;
 let deleteUsersResponse;

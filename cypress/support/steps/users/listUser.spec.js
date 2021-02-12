@@ -1,6 +1,6 @@
 /* global Given, Then, When, And */
 
-import { getUsers, getUser } from '../../../api/users'
+import { getUsers, getUser } from '../../../api/users/listUser'
 import { invalidUser } from '../../../date/users.date'
 
 let getUsersResponse;
